@@ -34,7 +34,7 @@ function handleEvent(event) {
     // ignore non-text-message event
     return Promise.resolve(null);
   }
-  else if (event.message.type === 'สวัสดี' || event.message.type === 'หวัดดี' ) {
+  else if (event.message.type === 'text' || event.message.type === 'หวัดดี' ) {
     const payload = {
       type : "text",
       text : "ก็มาดิครับ"
