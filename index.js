@@ -41,13 +41,6 @@ function handleEvent(event) {
     };
     return client.replyMessage(event.replyToken, payload);
   }
-  else if (event.message.type === 'ปาล์ม' || event.message.type === 'palm' ) {
-    const payload = {
-      type : "text",
-      text : "https://www.facebook.com/BSPHOTOSHOT"
-    };
-    return client.replyMessage(event.replyToken, payload);
-  }
 }
 
 // listen on port
