@@ -36,8 +36,55 @@ function handleEvent(event) {
   }
   else if (event.message.type === 'text' || event.message.type === 'หวัดดี' ) {
     const payload = {
-      type : "text",
-      text : "ก็มาดิครับ"
+      type: "bubble",
+      direction: "ltr",
+      header: {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "ทดสอบอยู่",
+            "align": "center",
+            "contents": []
+          }
+        ]
+      },
+      hero: {
+        "type": "image",
+        "url": "https://scontent.fphs2-1.fna.fbcdn.net/v/t1.6435-9/203691700_3035539753340898_5356628347126557590_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeEyVyD3pprWJaDUFmxw3hiY9BanzE1svXD0FqfMTWy9cALfv0cK3kioC17Qnfh2Ec5DRtR3lEQ45_LxvH0Afagf&_nc_ohc=h6FR3F1bK2QAX8CCDU_&tn=30ea5gGN8jOV0ffP&_nc_ht=scontent.fphs2-1.fna&oh=e6ea5dcb22a928aece23f1f09f9bf3be&oe=60D68156",
+        "align": "center",
+        "gravity": "center",
+        "size": "full",
+        "aspectRatio": "1.51:1",
+        "aspectMode": "cover"
+      },
+      body: {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "เมนู",
+            "align": "center",
+            "contents": []
+          }
+        ]
+      },
+      footer: {
+        "type": "box",
+        "layout": "horizontal",
+        "contents": [
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "อยยากรู้จัก",
+              "uri": "https://linecorp.com"
+            }
+          }
+        ]
+      }
     };
     return client.replyMessage(event.replyToken, payload);
   }
