@@ -34,13 +34,13 @@ function handleEvent(event) {
     // ignore non-text-message event
     return Promise.resolve(null);
   }
-  else if (event.message.type === 'สวัสดี' || event.message.type === 'หวัดดี' ) {
-    const payload = {
-      type : "text",
-      text : "ก็มาดิครับ"
-    };
-    return client.replyMessage(event.replyToken, payload);
-  }
+  // else if (event.message.type === 'สวัสดี' || event.message.type === 'หวัดดี' ) {
+  //   const payload = {
+  //     type : "text",
+  //     text : "ก็มาดิครับ"
+  //   };
+  //   return client.replyMessage(event.replyToken, payload);
+  // }
   else if (event.message.type === 'ปาล์ม' || event.message.type === 'palm' || event.message.type === 'text' ) {
     const payload = {
       "type": "bubble",
