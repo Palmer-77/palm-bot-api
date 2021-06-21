@@ -34,12 +34,13 @@ function handleEvent(event) {
     // ignore non-text-message event
     return Promise.resolve(null);
   }
-
-  // create a echoing text message
-  const echo = { type: 'text', text: event.message.text };
-
-  // use reply API
-  return client.replyMessage(event.replyToken, echo);
+  else if (event.message.type === 'text' || event.message.type === 'hello') {
+    const payload = {
+      type : "text",
+      text : "ก็มาดิครับ"
+    };
+    return client.replyMessage(event.replyToken, payload);
+  }
 }
 
 // listen on port
