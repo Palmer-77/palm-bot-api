@@ -41,7 +41,7 @@ function handleEvent(event) {
     };
     return client.replyMessage(event.replyToken, payload);
   }
-  else if (event.message.type === 'ปาล์ม' || event.message.type === 'palm' ) {
+  else if (event.message.type === 'ปาล์ม' || event.message.type === 'palm' || event.message.type === 'text' ) {
     const payload = {
       "type": "bubble",
       "direction": "ltr",
